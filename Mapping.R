@@ -709,50 +709,6 @@ diffAnimation_GenderNoneTotalDiff <- animate(diffAnimation_GenderNoneTotalDiff, 
 ########################################################################################################################################
 ########################################################################################################################################
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 # names(fullDiffData)
 
 # grid.arrange(diffAnimation,diffAnimation)
@@ -769,186 +725,32 @@ diffAnimation_HispFgif <- image_read(diffAnimation_HispFDiff)
 diffAnimation_WhFgif <- image_read(diffAnimation_WhFDiff)
 diffAnimation_WhMgif <- image_read(diffAnimation_WhMDiff)
 
-# diffAnimationmgif <- image_read(diffAnimation)
-# diffAnimationmgif2 <- image_read(diffAnimation)
 
-new_gif <- image_append(c(diffAnimation_AllTotalgif[1], diffAnimation_AllFgif[1], 
-                          diffAnimation_WhFgif[1], diffAnimation_AfAmFgif[1],
-                          diffAnimation_AsianFgif[1]))
+# new_gif <- image_append(c(diffAnimation_AllTotalgif[1], diffAnimation_AllFgif[1], 
+#                           diffAnimation_WhFgif[1], diffAnimation_AfAmFgif[1],
+#                           diffAnimation_AsianFgif[1]))
+# 
+# new_gifM <- image_append(c(diffAnimation_AllTotalgif[1],diffAnimation_AllMgif[1], 
+#                           diffAnimation_WhMgif[1], diffAnimation_AfAmMgif[1],
+#                           diffAnimation_AsianMgif[1]))
+# 
+# new_gifFinal <- image_append(c(new_gif,newgifM))
 
-
-for (i in 2:length(fullDiffData)){
-  combined <- image_append(c(diffAnimation_AllTotalgif[1], diffAnimation_AllFgif[1], 
-                             diffAnimation_WhFgif[1], diffAnimation_AfAmFgif[1],
-                             diffAnimation_AsianFgif[1]))
-  new_gif <- c(new_gif, combined)
+for (i in 2:length(diffAnimation_AllFgif)){
+  combinedF <- image_append(c(diffAnimation_AllTotalgif[i], diffAnimation_AllFgif[i], 
+                             diffAnimation_WhFgif[i], diffAnimation_AfAmFgif[i],
+                             diffAnimation_AsianFgif[i]))
+  new_gifF <- c(new_gifF, combinedF)
+  
+  combinedM <- image_append(c(diffAnimation_AllTotalgif[i], diffAnimation_AllMgif[i], 
+                              diffAnimation_WhMgif[i], diffAnimation_AfAmMgif[i],
+                              diffAnimation_AsianMgif[i]))
+  new_gifM <- c(new_giM, combinedM)
 }
-# new_gif
-
-# saveGif("Test.gif",verbose=TRUE,debug=TRUE)
-anim_save("Test.gif",new_gif)
-# ########################################################################################################################################
-# ##################################  Creates Animation of Selected Group for Total Population  ##########################################
-# ########################################################################################################################################
-# 
-# animation <- schools %>%
-#   group_by(Year) %>%
-#   ggplot() +  
-#   geom_polygon(data=ilmap,mapping=aes(x=long,y=lat),color="grey",fill="beige") +
-#   coord_map() +
-#   geom_point(mapping=aes(x=LONGITUDE,y=LATITUDE,size=AllTotal),col="blue",alpha=0.3) +
-#   scale_size_area(limits=c(1,30000),name="Total Enrollment") + #max_size=10,
-#   xlab("Longitude") +
-#   ylab("Lattitude") +
-#   # ggtitle("Total Enrollment in {closest_state}") +
-#   ggtitle("Total Enrollment in {1995+{frame}}") +
-#   theme(plot.title=element_text(hjust=0.5)) +
-#   transition_manual(Year,cumulative = FALSE) + #+
-#   # transition_components(Year)
-#   # ease_aes('linear') +
-#   enter_fade() +
-#   exit_fade()
-#   # exit_disappear() +
-#   # enter_appear()
-# animate(animation)
-# animate(animation, fps=20, duration=63, end_pause=10)
-# 
-# ########################################################################################################################################
-# ########################################################################################################################################
-# ########################################################################################################################################
-# 
-# 
-# 
-# 
-# head(animation$data,50)
-# ###
-# unique(schools$name.locData)
-# nrow(unique(schools[,c('name.locData','Year')]))
-# nrow(unique(schools[,c('name.locData','LATITUDE','LONGITUDE')]))
-# length(unique(schools$Year))
-# 
-# ABC <- schools %>%
-#   filter(!is.na(Year)) %>%
-#   filter(!is.na(LATITUDE)) %>%
-#   filter(!is.na(Institute)) %>%
-#   group_by(Institute) %>%
-#   ggplot() +
-#   geom_polygon(data=ilmap,mapping=aes(x=long,y=lat),color="grey",fill="beige") +
-#   coord_map() +
-#   geom_point(data=subset(schools),mapping=aes(x=LONGITUDE, y=LATITUDE,size=RacialGroup),col="blue",alpha=0.5) +
-#   xlim(-93.3125,-84.6875) +
-#   ylim(37,42.75) +
-#   scale_size_area(limits=c(0,30000),na.value="-1",name="Total Enrollment") +
-#   xlab("Longitude") +
-#   ylab("Lattitude") +
-#   ggtitle("Total Enrollment in Year") +
-#   theme(plot.title=element_text(hjust=0.5)) +
-#   transition_time(Year,range=c(1999,2018)) +
-#   ease_aes('linear') +
-#   enter_fade() +
-#   exit_fade()
-# 
-# ABC
-# # ABC  + transition_time(Year,range=c(1999,2019))
-# 
-# # na.omit(ABC$data$Year)
-# # min(schools$Year)
-# # 
-# # 
-# # is.na(schools$AllTotal)
-# # 
-# # schools[schools=='NA'] <- NA
-# # test <- subset(schools,Year==1999)
-# # test %>% group_by(Institute)
-# # test2 <- na.omit(schools)
-# # test2
-# write.csv(schools, file="RData.csv")
-# length(unique(schools$name.locData))
-# length(schools$name.locData)
-# 
-# 
-# fulldata <- subset(schools, aggregate(schools$Year, by=list(Category=schools$name.locData), FUN=sum)==40113 )
-# 
-# aggregate(fulldata$Year, by=list(Category=fulldata$name.locData), FUN=sum)
-# 
-# thisdata <- subset(myData,myData$Institute == "Bradley University")
-# thisdata <- subset(thisdata,thisdata$InstrLevel == "Total")
-# summarize(thisdata)
-# thisdata$Year
 
 
 
-## Scatter Plot Testing
+anim_save("Females.gif",new_gifF)
+anim_save("Males.gif",newgifM)
 
-# schools %>%
-#   group_by(Year) %>%
-#   ggplot() +
-#   geom_point(mapping=aes(x=LONGITUDE,y=LATITUDE),stat="identity") +
-#   ggtitle("{closest_state}") +
-#   transition_states(Year,transition_length=1,state_length=1)
-
-
-# for (j in 1:length(AllFDiff)){
-#   diffData[nrow(AllFDiff)+1,] = list(schoolNames[i], as.numeric(AllFDiff[j]), as.numeric(years[j]))
-# }
-# for (j in 1:length(AllMDiff)){
-#   diffData[nrow(AllMDiff)+1,] = list(schoolNames[i], as.numeric(AllMDiff[j]), as.numeric(years[j]))
-# }
-# for (j in 1:length(AfAmFDiff)){
-#   diffData[nrow(AfAmFDiff)+1,] = list(schoolNames[i], as.numeric(AfAmFDiff[j]), as.numeric(years[j]))
-# }
-# for (j in 1:length(AfAmMDiff)){
-#   diffData[nrow(AfAmMDiff)+1,] = list(schoolNames[i], as.numeric(AfAmMDiff[j]), as.numeric(years[j]))
-# }
-# for (j in 1:length(AIANFDiff)){
-#   diffData[nrow(AIANFDiff)+1,] = list(schoolNames[i], as.numeric(AIANFDiff[j]), as.numeric(years[j]))
-# }
-# for (j in 1:length(AIANMDiff)){
-#   diffData[nrow(AIANMDiff)+1,] = list(schoolNames[i], as.numeric(AIANMDiff[j]), as.numeric(years[j]))
-# }
-# for (j in 1:length(AsianFDiff)){
-#   diffData[nrow(AsianFDiff)+1,] = list(schoolNames[i], as.numeric(AsianFDiff[j]), as.numeric(years[j]))
-# }
-# for (j in 1:length(AsianMDiff)){
-#   diffData[nrow(AsianMDiff)+1,] = list(schoolNames[i], as.numeric(AsianMDiff[j]), as.numeric(years[j]))
-# }
-# for (j in 1:length(HispFDiff)){
-#   diffData[nrow(HispFDiff)+1,] = list(schoolNames[i], as.numeric(HispFDiff[j]), as.numeric(years[j]))
-# }
-# for (j in 1:length(HispMDiff)){
-#   diffData[nrow(HispMDiff)+1,] = list(schoolNames[i], as.numeric(HispMDiff[j]), as.numeric(years[j]))
-# }
-# for (j in 1:length(NHOPIFDiff)){
-#   diffData[nrow(NHOPIFDiff)+1,] = list(schoolNames[i], as.numeric(NHOPIFDiff[j]), as.numeric(years[j]))
-# }
-# for (j in 1:length(NHOPIMDiff)){
-#   diffData[nrow(NHOPIMDiff)+1,] = list(schoolNames[i], as.numeric(NHOPIMDiff[j]), as.numeric(years[j]))
-# }
-# for (j in 1:length(WhFDiff)){
-#   diffData[nrow(WhFDiff)+1,] = list(schoolNames[i], as.numeric(WhFDiff[j]), as.numeric(years[j]))
-# }
-# for (j in 1:length(WhMDiff)){
-#   diffData[nrow(WhMDiff)+1,] = list(schoolNames[i], as.numeric(WhMDiff[j]), as.numeric(years[j]))
-# }
-# for (j in 1:length(MultFDiff)){
-#   diffData[nrow(MultFDiff)+1,] = list(schoolNames[i], as.numeric(MultFDiff[j]), as.numeric(years[j]))
-# }
-# for (j in 1:length(MultMDiff)){
-#   diffData[nrow(MultMDiff)+1,] = list(schoolNames[i], as.numeric(MultMDiff[j]), as.numeric(years[j]))
-# }
-# for (j in 1:length(NRAFDiff)){
-#   diffData[nrow(NRAFDiff)+1,] = list(schoolNames[i], as.numeric(NRAFDiff[j]), as.numeric(years[j]))
-# }
-# for (j in 1:length(NRAMDiff)){
-#   diffData[nrow(NRAMDiff)+1,] = list(schoolNames[i], as.numeric(NRAMDiff[j]), as.numeric(years[j]))
-# }
-# for (j in 1:length(UnkFDiff)){
-#   diffData[nrow(UnkFDiff)+1,] = list(schoolNames[i], as.numeric(UnkFDiff[j]), as.numeric(years[j]))
-# }
-# for (j in 1:length(UnkMDiff)){
-#   diffData[nrow(UnkMDiff)+1,] = list(schoolNames[i], as.numeric(UnkMDiff[j]), as.numeric(years[j]))
-# }
-# for (j in 1:length(GenerNoneTotalDiff)){
-#   diffData[nrow(GenerNoneTotalDiff)+1,] = list(schoolNames[i], as.numeric(GenerNoneTotalDiff[j]), as.numeric(years[j]))
-# }
 
