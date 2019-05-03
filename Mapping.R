@@ -1,13 +1,13 @@
-install.packages("tidyverse")
-install.packages("ggmap")
-install.packages("maps")
-install.packages("mapproj")
-install.packages("maptools")
-install.packages("rgdal")
-install.packages("rgeos")
-install.packages("gganimate")
-install.packages("gifski")
-install.packages("magick")
+# install.packages("tidyverse")
+# install.packages("ggmap")
+# install.packages("maps")
+# install.packages("mapproj")
+# install.packages("maptools")
+# install.packages("rgdal")
+# install.packages("rgeos")
+# install.packages("gganimate")
+# install.packages("gifski")
+# install.packages("magick")
 library(tidyverse)
 library(ggmap)
 library(rgdal)
@@ -139,6 +139,7 @@ diffAnimation_AllTotal <- fullDiffData %>%
   exit_fade()
 
 diffAnimation_AllTotal <- animate(diffAnimation_AllTotal, fps=20, duration=57, end_pause=10)
+# diffAnimation_AllTotal <- animate(diffAnimation_AllTotal)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -166,6 +167,7 @@ diffAnimation_AllF <- fullDiffData %>%
   exit_fade()
 
 diffAnimation_AllF <- animate(diffAnimation_AllF, fps=20, duration=57, end_pause=10)
+# diffAnimation_AllF <- animate(diffAnimation_AllF)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -193,6 +195,7 @@ diffAnimation_AllM <- fullDiffData %>%
   exit_fade()
 
 diffAnimation_AllM <- animate(diffAnimation_AllM, fps=20, duration=57, end_pause=10)
+# diffAnimation_AllM <- animate(diffAnimation_AllM)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -220,6 +223,7 @@ diffAnimation_AfAmFDiff <- fullDiffData %>%
   exit_fade()
 
 diffAnimation_AfAmFDiff <- animate(diffAnimation_AfAmFDiff, fps=20, duration=57, end_pause=10)
+# diffAnimation_AfAmFDiff <- animate(diffAnimation_AfAmFDiff)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -247,6 +251,7 @@ diffAnimation_AfAmMDiff <- fullDiffData %>%
   exit_fade()
 
 diffAnimation_AfAmMDiff <- animate(diffAnimation_AfAmMDiff, fps=20, duration=57, end_pause=10)
+# diffAnimation_AfAmMDiff <- animate(diffAnimation_AfAmMDiff)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -274,6 +279,7 @@ diffAnimation_AIANFDiff <- fullDiffData %>%
   exit_fade()
 
 diffAnimation_AIANFDiff <- animate(diffAnimation_AIANFDiff, fps=20, duration=57, end_pause=10)
+# diffAnimation_AIANFDiff <- animate(diffAnimation_AIANFDiff)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -301,6 +307,7 @@ diffAnimation_AIANMDiff <- fullDiffData %>%
   exit_fade()
 
 diffAnimation_AIANMDiff <- animate(diffAnimation_AIANMDiff, fps=20, duration=57, end_pause=10)
+# diffAnimation_AIANMDiff <- animate(diffAnimation_AIANMDiff)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -328,6 +335,7 @@ diffAnimation_AsianFDiff <- fullDiffData %>%
   exit_fade()
 
 diffAnimation_AsianFDiff <- animate(diffAnimation_AsianFDiff, fps=20, duration=57, end_pause=10)
+# diffAnimation_AsianFDiff <- animate(diffAnimation_AsianFDiff)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -355,6 +363,7 @@ diffAnimation_AsianMDiff <- fullDiffData %>%
   exit_fade()
 
 diffAnimation_AsianMDiff <- animate(diffAnimation_AsianMDiff, fps=20, duration=57, end_pause=10)
+# diffAnimation_AsianMDiff <- animate(diffAnimation_AsianMDiff)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -382,6 +391,7 @@ diffAnimation_HispFDiff <- fullDiffData %>%
   exit_fade()
 
 diffAnimation_HispFDiff <- animate(diffAnimation_HispFDiff, fps=20, duration=57, end_pause=10)
+# diffAnimation_HispFDiff <- animate(diffAnimation_HispFDiff)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -409,6 +419,7 @@ diffAnimation_HispMDiff <- fullDiffData %>%
   exit_fade()
 
 diffAnimation_HispMDiff <- animate(diffAnimation_HispMDiff, fps=20, duration=57, end_pause=10)
+# diffAnimation_HispMDiff <- animate(diffAnimation_HispMDiff)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -436,6 +447,7 @@ diffAnimation_NHOPIFDiff <- fullDiffData %>%
   exit_fade()
 
 diffAnimation_NHOPIFDiff <- animate(diffAnimation_NHOPIFDiff, fps=20, duration=57, end_pause=10)
+# diffAnimation_NHOPIFDiff <- animate(diffAnimation_NHOPIFDiff)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -463,6 +475,7 @@ diffAnimation_NHOPIMDiff <- fullDiffData %>%
   exit_fade()
 
 diffAnimation_NHOPIMDiff <- animate(diffAnimation_NHOPIMDiff, fps=20, duration=57, end_pause=10)
+# diffAnimation_NHOPIMDiff <- animate(diffAnimation_NHOPIMDiff)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -490,6 +503,7 @@ diffAnimation_WhFDiff <- fullDiffData %>%
   exit_fade()
 
 diffAnimation_WhFDiff <- animate(diffAnimation_WhFDiff, fps=20, duration=57, end_pause=10)
+# diffAnimation_WhFDiff <- animate(diffAnimation_WhFDiff)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -517,6 +531,7 @@ diffAnimation_WhMDiff <- fullDiffData %>%
   exit_fade()
 
 diffAnimation_WhMDiff <- animate(diffAnimation_WhMDiff, fps=20, duration=57, end_pause=10)
+# diffAnimation_WhMDiff <- animate(diffAnimation_WhMDiff)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -544,6 +559,7 @@ diffAnimation_MultFDiff<- fullDiffData %>%
   exit_fade()
 
 diffAnimation_MultFDiff <- animate(diffAnimation_MultFDiff, fps=20, duration=57, end_pause=10)
+# diffAnimation_MultFDiff <- animate(diffAnimation_MultFDiff)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -571,6 +587,7 @@ diffAnimation_MultMDiff<- fullDiffData %>%
   exit_fade()
 
 diffAnimation_MultMDiff <- animate(diffAnimation_MultMDiff, fps=20, duration=57, end_pause=10)
+# diffAnimation_MultMDiff <- animate(diffAnimation_MultMDiff)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -598,6 +615,7 @@ diffAnimation_NRAFDiff<- fullDiffData %>%
   exit_fade()
 
 diffAnimation_NRAFDiff <- animate(diffAnimation_NRAFDiff, fps=20, duration=57, end_pause=10)
+# diffAnimation_NRAFDiff <- animate(diffAnimation_NRAFDiff)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -625,6 +643,7 @@ diffAnimation_NRAMDiff<- fullDiffData %>%
   exit_fade()
 
 diffAnimation_NRAMDiff <- animate(diffAnimation_NRAMDiff, fps=20, duration=57, end_pause=10)
+# diffAnimation_NRAMDiff <- animate(diffAnimation_NRAMDiff)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -652,6 +671,7 @@ diffAnimation_UnkFDiff<- fullDiffData %>%
   exit_fade()
 
 diffAnimation_UnkFDiff <- animate(diffAnimation_UnkFDiff, fps=20, duration=57, end_pause=10)
+# diffAnimation_UnkFDiff <- animate(diffAnimation_UnkFDiff)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -679,6 +699,7 @@ diffAnimation_UnkMDiff<- fullDiffData %>%
   exit_fade()
 
 diffAnimation_UnkMDiff <- animate(diffAnimation_UnkMDiff, fps=20, duration=57, end_pause=10)
+# diffAnimation_UnkMDiff <- animate(diffAnimation_UnkMDiff)
 ########################################################################################################################################
 ########################################################################################################################################
 ########################################################################################################################################
@@ -706,6 +727,7 @@ diffAnimation_GenderNoneTotalDiff<- fullDiffData %>%
   exit_fade()
 
 diffAnimation_GenderNoneTotalDiff <- animate(diffAnimation_GenderNoneTotalDiff, fps=20, duration=57, end_pause=10)
+# diffAnimation_GenderNoneTotalDiff <- animate(diffAnimation_GenderNoneTotalDiff)
 ########################################################################################################################################
 ########################################################################################################################################
 
@@ -726,15 +748,13 @@ diffAnimation_WhFgif <- image_read(diffAnimation_WhFDiff)
 diffAnimation_WhMgif <- image_read(diffAnimation_WhMDiff)
 
 
-# new_gif <- image_append(c(diffAnimation_AllTotalgif[1], diffAnimation_AllFgif[1], 
-#                           diffAnimation_WhFgif[1], diffAnimation_AfAmFgif[1],
-#                           diffAnimation_AsianFgif[1]))
-# 
-# new_gifM <- image_append(c(diffAnimation_AllTotalgif[1],diffAnimation_AllMgif[1], 
-#                           diffAnimation_WhMgif[1], diffAnimation_AfAmMgif[1],
-#                           diffAnimation_AsianMgif[1]))
-# 
-# new_gifFinal <- image_append(c(new_gif,newgifM))
+new_gifF <- image_append(c(diffAnimation_AllTotalgif[1], diffAnimation_AllFgif[1],
+                          diffAnimation_WhFgif[1], diffAnimation_AfAmFgif[1],
+                          diffAnimation_AsianFgif[1]))
+
+new_gifM <- image_append(c(diffAnimation_AllTotalgif[1],diffAnimation_AllMgif[1],
+                          diffAnimation_WhMgif[1], diffAnimation_AfAmMgif[1],
+                          diffAnimation_AsianMgif[1]))
 
 for (i in 2:length(diffAnimation_AllFgif)){
   combinedF <- image_append(c(diffAnimation_AllTotalgif[i], diffAnimation_AllFgif[i], 
@@ -745,12 +765,18 @@ for (i in 2:length(diffAnimation_AllFgif)){
   combinedM <- image_append(c(diffAnimation_AllTotalgif[i], diffAnimation_AllMgif[i], 
                               diffAnimation_WhMgif[i], diffAnimation_AfAmMgif[i],
                               diffAnimation_AsianMgif[i]))
-  new_gifM <- c(new_giM, combinedM)
+  new_gifM <- c(new_gifM, combinedM)
 }
 
+final_gif <- image_append(c(new_gifF[1],new_gifM[1]),stack=TRUE)
 
+for (i in 2:length(new_gifF)){
+  combinedFinal <- image_append(c(new_gifF[i],new_gifM[i]),stack=TRUE)
+  final_gif <- c(final_gif, combinedFinal)
+}
 
 anim_save("Females.gif",new_gifF)
-anim_save("Males.gif",newgifM)
+anim_save("Males.gif",new_gifM)
+anim_save("Final_3SecEach.gif",final_gif)
 
 
